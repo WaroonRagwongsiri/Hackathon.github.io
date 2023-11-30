@@ -62,6 +62,7 @@ registerForm.addEventListener("submit", async (e) => {
     const username = registerForm.querySelector("input[type='text']").value;
     const email = registerForm.querySelector("input[type='email']").value;
     const password = registerForm.querySelector("input[type='password']").value;
+    const address = registerForm.querySelector("#address").value;
 
     try {
         // Create user in Firebase authentication
@@ -73,6 +74,7 @@ registerForm.addEventListener("submit", async (e) => {
             uid: user.uid,
             username: username,
             email: email,
+            address: address
             // Add additional user data if needed
         });
 
