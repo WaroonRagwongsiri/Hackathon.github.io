@@ -50,6 +50,7 @@ loginForm.addEventListener("submit", async (e) => {
         await signInWithEmailAndPassword(auth, email, password);
         console.log("Login successful");
         wrapper.classList.remove("active-popup");
+        //window.location.href = "../profile/profile.html";
         // Add any additional actions after successful login
     } catch (error) {
         console.error("Login error:", error.message);
@@ -92,6 +93,7 @@ onAuthStateChanged(auth, (user) => {
         // https://firebase.google.com/docs/reference/js/firebase.User
         console.log("User is signed in");
         // Add any additional actions after user is signed in
+        //window.location.href = "../profile/profile.html";
     } else {
         // User is signed out
         console.log("User is signed out");
